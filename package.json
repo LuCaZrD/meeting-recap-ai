@@ -1,0 +1,51 @@
+{
+  "name": "meeting-recap-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ứng dụng tạo tóm tắt cuộc họp từ file âm thanh bằng AI",
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/meeting-recap-ai.git"
+  },
+  "homepage": "https://meeting-recap-ai.pages.dev",
+  "scripts": {
+    "dev": "next dev -p 3005",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ffmpeg/core": "^0.12.4",
+    "@ffmpeg/ffmpeg": "^0.12.7",
+    "@ffmpeg/util": "^0.12.1",
+    "@radix-ui/react-label": "^2.1.2",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@radix-ui/react-tabs": "^1.1.3",
+    "@tailwindcss/typography": "^0.5.16",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.484.0",
+    "next": "^15.2.4",
+    "next-themes": "^0.4.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^9.1.0",
+    "sonner": "^2.0.2",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8.4.31",
+    "postcss-import": "^16.1.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}

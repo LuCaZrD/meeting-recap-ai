@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper-color: #f5f1e9;
+  --text-color: #2d2d2d;
+  --border-color: #d1cdc7;
+}
+
+.dark {
+  --paper-color: #2d2d2d;
+  --text-color: #f5f1e9;
+  --border-color: #3d3d3d;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--paper-color)] text-[var(--text-color)];
+    font-family: 'IBM Plex Mono', 'Space Mono', monospace;
+  }
+
+  * {
+    @apply border-[var(--border-color)];
+  }
+}
+
+.step-indicator {
+  @apply flex items-center justify-between max-w-3xl mx-auto mb-8;
+}
+
+.step-indicator .step {
+  @apply flex flex-col items-center;
+}
+
+.step-indicator .step-number {
+  @apply w-8 h-8 rounded-full border-2 flex items-center justify-center font-bold mb-2;
+}
+
+.step-indicator .step-label {
+  @apply text-sm font-medium;
+}
+
+.step-indicator .step.active .step-number {
+  @apply bg-neutral-900 text-[var(--paper-color)] border-neutral-900;
+}
+
+.step-indicator .step.completed .step-number {
+  @apply bg-green-600 text-[var(--paper-color)] border-green-600;
+}
+
+.step-indicator .step-line {
+  @apply flex-1 h-0.5 bg-[var(--border-color)] mx-4;
+}
+
+.step-indicator .step-line.completed {
+  @apply bg-green-600;
+}
