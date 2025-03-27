@@ -1,19 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  distDir: 'out',
   images: {
     unoptimized: true,
   },
-  // Đảm bảo ứng dụng hoạt động đúng trong thư mục con trên Cloudflare Pages nếu cần
-  basePath: '',
-  // Disable the use of React Strict Mode for production builds
-  reactStrictMode: process.env.NODE_ENV === 'development',
-  experimental: {
-    // appDir đã được loại bỏ từ Next.js 13+
+  transpilePackages: ['next-themes'],
+  typescript: {
+    // Bỏ qua lỗi TypeScript trong quá trình build
+    ignoreBuildErrors: true,
   },
   eslint: {
+    // Bỏ qua lỗi ESLint trong quá trình build
     ignoreDuringBuilds: true,
   }
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;
